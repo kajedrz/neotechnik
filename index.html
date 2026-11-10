@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEOTECHNIK – 100 Jahre | Linde Material Handling Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',Arial,sans-serif;color:#383737;background:#fff;font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 0}
+/* top bar */
+.topbar{background:#f2f2f2;height:43px;font-size:13px;color:#383737}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:43px}
+.topbar b{color:#9f1720;font-weight:400}
+.topbar .left{padding-right:12px;border-right:1px solid #ddd}
+.topbar .social{display:flex;align-items:center;gap:20px}
+.topbar .social span{margin-right:2px}
+.topbar svg{width:14px;height:14px;fill:#222;display:block}
+/* header */
+.header{padding:20px 0 22px}
+.header .wrap{display:flex;align-items:center;gap:30px}
+.header .logo img{width:170px;display:block}
+.search{flex:1;height:50px;border:1px solid #ddd;border-radius:25px;display:flex;align-items:center;padding:0 22px 0 25px;justify-content:space-between}
+.search input{border:0;outline:0;font:italic 13px 'Barlow',sans-serif;color:#555;width:100%;background:transparent}
+.search input::placeholder{color:#888}
+.search svg{width:18px;height:18px;stroke:#111;fill:none;stroke-width:2;flex:none}
+.hotline{display:flex;align-items:center;gap:14px;border-left:1px solid #e3e3e3;padding-left:26px}
+.hotline .qr{width:50px;height:50px;display:block}
+.hotline small{display:block;font-size:11px;color:#555;text-transform:uppercase;letter-spacing:.2px}
+.hotline .tel{font-size:18px;color:#c4262e;font-weight:400;line-height:1.2;white-space:nowrap}
+.hotline a.mail{font-size:11.5px;color:#c4262e;text-decoration:underline;display:block}
+/* nav */
+nav.main{background:#383737}
+nav.main ul{list-style:none;display:flex;justify-content:space-between}
+nav.main li{flex:1}
+nav.main a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:106px;padding:0;color:#fff;font-size:11.5px;line-height:1.4;text-align:center;font-weight:400}
+nav.main a .ic{height:34px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+nav.main a .ic img{height:34px;width:auto;display:block}
+nav.main a:hover{background:#4a4949}
+nav.main li{position:relative}
+/* slider */
+.slider{margin-top:20px;position:relative;overflow:hidden;background:#222;aspect-ratio:1240/542}
+.slides{display:flex;height:100%;transition:transform .7s ease}
+.slide{min-width:100%;height:100%;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slide .cta{position:absolute;left:6.4%;top:62%;}
+.slide .cta a{display:none}
+.hit{position:absolute;display:block}
+.dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:2px;z-index:3}
+.dots button{width:9px;height:9px;border-radius:50%;border:1px solid #fff;background:rgba(255,255,255,.45);cursor:pointer;padding:0}
+.dots button.on{background:#fff;border-color:#888}
+/* intro */
+.intro{background:#ededed;margin-top:20px;display:flex;align-items:center;padding:20px 30px 20px 0;min-height:200px}
+.intro .img{width:430px;flex:none;text-align:center}
+.intro .img img{width:260px;height:auto;mix-blend-mode:multiply}
+.intro .txt{flex:1;padding-left:0}
+.intro h2{font-size:23px;font-weight:500;color:#111;margin-bottom:14px;line-height:1.2}
+.intro p{font-size:13px;color:#555;line-height:1.6;margin-bottom:14px;max-width:760px}
+.intro .more{display:inline-block;font-size:9.5px;letter-spacing:.3px;color:#3a54a6;background:#e5e5e5;padding:3px 8px;text-transform:uppercase}
+/* two columns */
+.cols{display:flex;gap:10px;margin-top:10px;align-items:flex-start}
+.col-l{width:300px;flex:none;background:#ededed;padding:16px 14px 18px}
+.col-l .hd{font-size:12.5px;color:#777;padding-bottom:6px;border-bottom:1px solid #ddd;margin:0 0 20px;margin-left:0}
+.carousel{overflow:hidden;background:#fff;width:210px;margin:0 auto}
+.car-track{display:flex;transition:transform .5s ease}
+.car-track a{min-width:210px;display:block}
+.car-track img{width:210px;height:210px;display:block;object-fit:cover}
+.cdots{display:flex;justify-content:center;gap:6px;margin-top:18px;flex-wrap:wrap}
+.cdots button{width:7px;height:7px;border-radius:50%;border:0;background:#b9b9b9;cursor:pointer;padding:0}
+.cdots button.on{background:#333}
+.col-r{flex:1;display:flex;flex-direction:column;gap:10px}
+.news{background:#ededed;display:flex;gap:28px;padding:14px 34px 16px 14px;align-items:flex-start}
+.news .ph{width:160px;flex:none}
+.news .ph img{width:160px;height:auto;display:block}
+.news h3{font-size:12.5px;color:#9f1720;font-weight:500;line-height:1.3;margin:2px 0 10px;width:100%}
+.news p{font-size:10.5px;color:#666;line-height:1.55;margin-bottom:12px}
+.news .lnk{font-size:10px;color:#9f1720;text-decoration:none}
+.news .lnk:hover{text-decoration:underline}
+.profit{background:#ededed;display:flex;justify-content:space-between;align-items:flex-start;padding:16px 18px 12px 14px}
+.profit h3{font-size:12.5px;color:#9f1720;font-weight:500;line-height:1.35;max-width:380px}
+.profit img{width:115px;display:block;margin-top:-4px}
+.profit-p{padding:0 18px 22px 14px;margin-top:-10px;background:#ededed;font-size:10.5px;color:#666;line-height:1.55}
+.profit-wrap{display:flex;flex-direction:column}
+footer{height:60px}
+/* cookie button */
+.cookie{position:fixed;left:20px;bottom:20px;width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;z-index:50;cursor:pointer}
+.cookie svg{width:34px;height:34px}
+@media(max-width:1260px){.wrap{padding:0 20px}}
+@media(max-width:900px){
+ .header .wrap{flex-wrap:wrap}
+ .hotline{display:none}
+ nav.main ul{overflow-x:auto}
+ nav.main li{min-width:110px}
+ .intro{flex-direction:column;padding:20px}
+ .intro .img{width:auto}
+ .cols{flex-direction:column}
+ .col-l{width:100%}
+ .news{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">Seit über <b>60 Jahren</b> Vertragspartner der Linde Material Handling.</div>
+    <div class="social">
+      <span>Follow:</span>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.7.2-1 1.1-1H17V2h-2.6C11.400 2 10 3.700 10 6.200V8H7.500v3.500H10V22h4V11.500h2.800L17.300 8z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.300A4.700 4.700 0 1 0 12 16.700 4.700 4.700 0 0 0 12 7.300zm0 7.700a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM17.100 5.700a1.100 1.100 0 1 0 0 2.200 1.100 1.100 0 0 0 0-2.200zM12 3.800c2.400 0 2.700 0 3.600.1 2.300.1 3.400 1.200 3.500 3.500.1.900.1 1.200.1 3.600s0 2.700-.1 3.600c-.1 2.300-1.200 3.400-3.500 3.500-.9.100-1.200.1-3.600.1s-2.700 0-3.600-.1c-2.300-.1-3.400-1.200-3.500-3.500C4.800 14.700 4.800 14.400 4.800 12s0-2.700.1-3.600c.1-2.300 1.200-3.400 3.500-3.500.9-.1 1.200-.1 3.600-.1M12 2.200c-2.400 0-2.800 0-3.700.1C5 2.400 3 4.400 2.900 8.300 2.800 9.200 2.800 9.600 2.800 12s0 2.800.1 3.700c.1 3.900 2.100 5.900 5.400 6 .9.100 1.300.1 3.700.1s2.800 0 3.700-.1c3.300-.1 5.300-2.100 5.400-6 .1-.9.1-1.300.1-3.700s0-2.800-.1-3.700c-.1-3.900-2.100-5.900-5.400-6-.9-.1-1.300-.1-3.700-.1z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.500 8.800h3.300V20H4.500zM6.200 3.500a1.900 1.900 0 1 1 0 3.800 1.900 1.900 0 0 1 0-3.800zM9.900 8.800h3.100v1.500h.1c.4-.8 1.500-1.800 3.200-1.800 3.400 0 4 2.200 4 5.100V20h-3.300v-5.600c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900V20H9.900z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/logo-100.webp" alt="100 Jahre NEOTECHNIK 1926 - 2026"></a>
+    <form class="search" onsubmit="return false">
+      <input type="text" placeholder="I'm searching for...">
+      <svg viewBox="0 0 24 24"><circle cx="10.500" cy="10.500" r="6.500"/><path d="M15.500 15.500L21 21"/></svg>
+    </form>
+    <div class="hotline">
+      <svg class="qr" viewBox="0 0 25 25" shape-rendering="crispEdges">
+        <rect width="25" height="25" fill="#fff"/>
+        <g fill="#111">
+          <path d="M0 0h7v7H0zM18 0h7v7h-7zM0 18h7v7H0z"/>
+        </g>
+        <g fill="#fff"><path d="M1 1h5v5H1zM19 1h5v5h-5zM1 19h5v5H1z"/></g>
+        <g fill="#111"><path d="M2 2h3v3H2zM20 2h3v3h-3zM2 20h3v3H2zM9 0h2v2H9zM12 1h2v3h-2zM9 4h2v2H9zM14 5h2v2h-2zM8 8h3v2H8zM12 8h2v2h-2zM16 9h3v2h-3zM21 8h2v3h-2zM0 9h2v2H0zM3 9h3v2H3zM8 12h2v3H8zM11 11h3v2h-3zM15 12h2v2h-2zM19 13h3v2h-3zM23 12h2v3h-2zM0 13h3v2H0zM4 12h2v3H4zM9 17h3v2H9zM13 15h2v3h-2zM16 17h2v2h-2zM20 17h3v2h-3zM9 21h2v3H9zM12 20h3v2h-3zM16 21h2v3h-2zM20 21h2v2h-2zM23 20h2v3h-2zM14 23h2v2h-2z"/></g>
+        <circle cx="12.500" cy="13" r="3.200" fill="#25d366"/><circle cx="12.500" cy="13" r="1.400" fill="#fff"/>
+      </svg>
+      <div>
+        <small>Service Hotline</small>
+        <div class="tel">0 52 05 / 99 80 - 2945</div>
+        <a class="mail" href="mailto:Serviceberatung@neotechnik.de">Serviceberatung@neotechnik.de</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="main">
+    <ul>
+      <li><a href="#"><span class="ic"><img src="img/nav-linde1.png" alt=""></span>Linde Stapler<br>Neu &amp; Gebraucht</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-miet.png" alt=""></span>NEOTECHNIK<br>Mietservice</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-linde2.png" alt=""></span>Gebrauchte<br>Linde Stapler</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-auto.png" alt=""></span>Automatisierung<br>&amp; Software</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-regal.png" alt=""></span>Regalsysteme<br>&amp; Zubehör</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-service.png" alt=""></span>Service &amp;<br>Dienstleistungen</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-akad.png" alt=""></span>NEOTECHNIK<br>Akademie</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-ausb.png" alt=""></span>Ausbildung<br>&amp; Karriere</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-neo1.png" alt=""></span>Unternehmen<br>&amp; Kontakt</a></li>
+      <li><a href="#"><span class="ic"><img src="img/nav-neo2.png" alt=""></span>Broschüren<br>&amp; Produktvideos</a></li>
+    </ul>
+  </nav>
+
+  <section class="slider" id="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="img/hero-100.png" alt="100 Jahre NEOTECHNIK 1926 - 2026"></div>
+      <div class="slide">
+        <img src="img/hero-angebote.webp" alt="Aktuelle Angebote auf einen Blick">
+        <a class="hit" href="#" style="left:6.4%;top:53.600%;width:16.800%;height:9.600%" aria-label="zu den Angeboten"></a>
+      </div>
+    </div>
+    <div class="dots" id="dots"><button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div>
+  </section>
+
+  <section class="intro">
+    <div class="img"><img src="img/forklift.webp" alt="Linde Schubmaststapler"></div>
+    <div class="txt">
+      <h2>Effiziente Flurförderzeuge und Stapler von Linde Material Handling</h2>
+      <p>NEOTECHNIK ist Ihr Partner in Bielefeld, Osnabrück, Münster, OWL und Ladbergen für leistungsstarke Flurförderzeuge von Linde. Unsere breite Auswahl – von Staplern über Nieder- und Hochhubwagen bis hin zu automatisierten Lösungen der MATIC-Reihe – steigert die Effizienz und Sicherheit in Ihrer Logistik. Mit individuellen Finanzierungslösungen und geprüften Gebrauchtgeräten bieten wir Ihnen Flexibilität für jeden Bedarf.</p>
+      <p>Vertrauen Sie auf unsere langjährige Erfahrung und Linde Qualität für zuverlässige, wirtschaftliche und innovative Lösungen im Bereich Intralogistik.</p>
+      <a class="more" href="#">+ Weitere Informationen</a>
+    </div>
+  </section>
+
+  <section class="cols">
+    <aside class="col-l">
+      <div class="hd">Aktuelle Broschüren</div>
+      <div class="carousel"><div class="car-track" id="ctrack">
+        <a href="#"><img src="img/software.webp" alt="Softwarelösungen für die Intralogistik"></a>
+        <a href="#"><img src="img/intralogistik.png" alt="Intralogistik Kompetenz"></a>
+      </div></div>
+      <div class="cdots" id="cdots"><button class="on"></button><button></button></div>
+    </aside>
+    <div class="col-r">
+      <article class="news">
+        <div class="ph"><a href="#"><img src="img/bauer.png" alt="Oberbürgermeisterin Dr. Christiana Bauer zu Gast bei NEOTECHNIK"></a></div>
+        <div>
+          <h3>Oberbürgermeisterin Dr. Christiana Bauer zu Gast bei NEOTECHNIK</h3>
+          <p>Oberbürgermeisterin Dr. Christiana Bauer zu Gast bei NEOTECHNIK Anlässlich unseres 100-jährigen Firmenjubiläums durften wir die Bielefelder Oberbürgermeisterin Dr. Christiana Bauer bei NEOTECHNIK begrüßen. Bei einem Rundgang erhielt sie Einblicke in unser Unternehmen, unsere technischen Lösungen und die...</p>
+          <a class="lnk" href="#">zum Video</a>
+        </div>
+      </article>
+      <div class="profit-wrap">
+        <div class="profit">
+          <h3>Profitieren auch Sie von unserer mehr als<br>60 jährigen Erfahrung im Bereich der<br>Intralogistik.</h3>
+          <img src="img/logos.png" alt="NEOTECHNIK – Linde Material Handling">
+        </div>
+        <div class="profit-p">Seit 1965 sind wir Ihr Kompetenter Ansprechpartner in Ostwestfalen-Lippe, im Münsterland und im Osnabrücker Land, wenn es um Lösungen rund um das Thema des innerbetrieblichen Materialflusses geht.</div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer></footer>
+
+<div class="cookie" title="Cookie-Einstellungen">
+  <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#555"/><g fill="#fff"><circle cx="13" cy="14" r="3"/><circle cx="25" cy="12" r="2.500"/><circle cx="29" cy="22" r="3"/><circle cx="17" cy="26" r="3.500"/><circle cx="9" cy="23" r="1.800"/><circle cx="23" cy="31" r="1.800"/></g></svg>
+</div>
+
+<script>
+(function(){
+  var slides=document.getElementById('slides'),dots=document.querySelectorAll('#dots button'),i=0,n=dots.length,t;
+  function go(k){i=(k+n)%n;slides.style.transform='translateX(-'+i*100+'%)';dots.forEach(function(d,j){d.classList.toggle('on',j===i)});}
+  function start(){clearInterval(t);t=setInterval(function(){go(i+1)},5000);}
+  dots.forEach(function(d,j){d.addEventListener('click',function(){go(j);start();});});
+  start();
+  var tr=document.getElementById('ctrack'),cd=document.querySelectorAll('#cdots button'),c=0,m=cd.length;
+  function cg(k){c=(k+m)%m;tr.style.transform='translateX(-'+c*210+'px)';cd.forEach(function(d,j){d.classList.toggle('on',j===c)});}
+  cd.forEach(function(d,j){d.addEventListener('click',function(){cg(j);});});
+  setInterval(function(){cg(c+1)},4000);
+})();
+</script>
+</body>
+</html>
